@@ -1,0 +1,14 @@
+version: '3'
+services:
+  qinglong:
+    image: whyour/qinglong:latest
+    container_name: qinglong
+    restart: always
+    ports:
+      - 5700:5700
+    volumes:
+      - ./ql/config:/ql/config
+      - ./ql/log:/ql/log
+      - ./ql/db:/ql/db
+      - ./ql/scripts:/ql/scripts
+      - ./ql/jbot:/ql/jbot
